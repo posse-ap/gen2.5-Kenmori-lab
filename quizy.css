@@ -1,0 +1,36 @@
+.choices{
+    list-style: none;
+}
+.wrapper {
+    max-width: 500px;
+        margin: 0 auto;
+    }
+    .choice{
+        border: 1px solid #ebebeb;
+        margin: 10px;
+        box-shadow: 0 3px 2px 2px #ebebeb; 
+        cursor: pointer;
+    }
+.site_title{
+    font-size: 19px;
+}
+.title{
+    position: relative;
+    /* text-decoration: underline;
+    text-decoration-color: green; */
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    /* display: inline-block;
+    border-bottom: solid 4px green; */
+}
+.title::after{
+    position: absolute;
+    display: inline-block;
+    width: 87pt;
+    height: 2px;
+    background-color: #00ab36;
+    content: '';
+    bottom: -10px;
+    left: calc(13% - 55px);
+}
