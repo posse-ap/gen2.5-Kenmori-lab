@@ -34,3 +34,9 @@
     bottom: -10px;
     left: calc(13% - 55px);
 }
+.quiz-result{
+    display: none;
+}
+#button1{
+    background-color: red;
+}

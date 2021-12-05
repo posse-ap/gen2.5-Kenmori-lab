@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,29 @@
     <link rel="stylesheet" href="style.css">
     <title>quizy</title>
 </head>
+
 <body>
     <div class="wrapper">
         <h1 class="site_title">ガチで東京の人しか解けない！　＃東京の難読地名クイズ</h1>
         <div class="content">
-          <h2 class="title">1.この地名はなんて読む？</h2>
-          <img src="image/高輪.png" alt="高輪">
-          <ul class="choices">
-              <li class="choice">たかなわ</li>
-              <li class="choice">こうわ</li>
-              <li class="choice">たかわ</li>
-          </ul>
+            <h2 class="title">1.この地名はなんて読む？</h2>
+            <img src="image/高輪.png" alt="高輪">
+            <ul class="choices">
+                <li class="choice" id="true-choice" onclick="color1">たかなわ</li>
+                <li class="choice" id="wrong-choice">こうわ</li>
+                <li class="choice" id="wrong-choice">たかわ</li>
+            </ul>
+        </div>
+        <div class="quiz-result">
+            <p>正解！</p>
+            <p>正解は「たかなわ」です！</p>
+        </div>
+        <div class="quiz-result">
+            <p>不正解！</ｐ>
+            <p>正解は「たかなわ」です！</p>
+        </div>
     </div>
-</div>
+    <script src="./index.js"></script>
 </body>
+
 </html>
