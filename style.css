@@ -49,6 +49,7 @@
     background-color: #287def;
     color: white;
 }
+
 .result-true{
     display: block;
 }
@@ -65,6 +66,7 @@
     background-color: #ff5128;
     color: white;
 }
+
 .result-false{
     display: block;
 }
@@ -76,4 +78,7 @@
     margin-bottom: 10px;
     border-bottom: 3px solid #ff5128;
     display: inline-block;
+}
+.unClick{
+    pointer-events: none;
 }
