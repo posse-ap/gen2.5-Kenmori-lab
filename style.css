@@ -3,16 +3,16 @@
 }
 .wrapper {
     max-width: 500px;
-        margin: 0 auto;
-    }
-    .choice{
-        display: block;
-        border: 1px solid #ebebeb;
-        margin: 10px 0;
-        padding: 13px;
-        box-shadow: 0 3px 2px 2px #ebebeb; 
-        cursor: pointer;
-        font-weight: 600;
+    margin: 0 auto;
+}
+.choice{
+    display: block;
+    border: 1px solid #ebebeb;
+    margin: 10px 0;
+    padding: 13px;
+    box-shadow: 0 3px 2px 2px #ebebeb; 
+    cursor: pointer;
+    font-weight: 600;
     }
 .site_title{
     font-size: 19px;

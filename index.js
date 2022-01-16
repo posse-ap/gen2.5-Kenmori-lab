@@ -4,7 +4,7 @@
     let choice = [
         ['たかなわ','こうわ','たかわ'],['かめいど','かめど','かめと'],['こうじまち','おかとまち','かゆまち'],['おなりもん','おかどもん','ごせいもん'],
         ['とどろき','たたら','たたりき'],['しゃくじい','せきこうい','いじい'],['ぞうしき','ざっしき','ざっしょく'],['おかちまち','ごしろちょう','みとちょう'],
-        ['ししぼね','しこね','ろっこつ'],['こぐれ','こはく','こしゃく']].map(shuffle);
+        ['ししぼね','しこね','ろっこつ'],['こぐれ','こはく','こしゃく']]
     
         function shuffle(arr) {
             for (let k = arr.length - 1; k > 0; k--) { // i = ランダムに選ぶ終点のインデックス
@@ -20,20 +20,24 @@ let main =''
 let loop= document.getElementById('loop');
     // 問題の複製
     for(let i = 0; i<10; i++){
+        let choices = ['<li class="choice" id="true-choice'+[i]+'">'+choice[i][0]+'</li>'
+        ,'<li class="choice" id="wrong-choice'+[i]+1+'">'+choice[i][1]+'</li>'
+        ,'<li class="choice" id="wrong-choice'+[i]+2+'">'+choice[i][2]+'</li>']
+        choices=shuffle(choices);
         main += '<h2 class="title">'+[i+1]+'.この地名はなんて読む？</h2>'
         +'<img src="image/'+picture[i]+'.png" alt="高輪">'
         +'<ul class="choices" id="choices">'
-        +'<li class="choice" id="true-choice'+[i]+'">'+choice[i][0]+'</li>'
-        +'<li class="choice" id="wrong-choice'+[i]+1+'">'+choice[i][1]+'</li>'
-        +'<li class="choice" id="wrong-choice'+[i]+2+'">'+choice[i][2]+'</li>'
+        +choices[0]
+        +choices[1]
+        +choices[2]
         +'</ul>'
         +'<div class="quiz-result" class="result-true" id="result-true'+[i]+'">'
-        +'<p class="answer-title-true">正解！</p>'
-        +'<p class="answer-p">正解は「'+choice[i][0]+'」です！</p>'
+            +'<p class="answer-title-true">正解！</p>'
+            +'<p class="answer-p">正解は「'+choice[i][0]+'」です！</p>'
         +'</div>'
         +'<div class="quiz-result" id="result-false'+[i]+'">'
-        +'<p class="answer-title-false">不正解！</ｐ>'
-        +'<p class="answer-p">正解は「'+choice[i][0]+'」です！</p>'
+            +'<p class="answer-title-false">不正解！</ｐ>'
+            +'<p class="answer-p">正解は「'+choice[i][0]+'」です！</p>'
         +'</div>';
         loop.innerHTML = main;
     };
