@@ -1,25 +1,51 @@
-header{
+/* html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+} */
+
+
+
+
+header {
     padding: 0 1rem;
     height: 64px;
     /* align-items: center; */
 }
-.headerContent{
+
+.headerContent {
     align-items: center;
 }
-.shareButton{
-    background: linear-gradient(to left,#0f71bc,#3ccfff);
+
+.shareButton {
+    background: linear-gradient(to left, #0f71bc, #3ccfff);
 }
-main{
+
+main {
     background-color: hsl(240, 18%, 97%);
 }
-.mainContainer{
-    margin: 0 100px;
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
 }
-.rightTopContents{
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.rightTopContents {
     gap: 20px;
     margin: 20px 20px 20px 0;
 }
-.rightTopContent{
+
+.rightTopContent {
     text-align: center;
     font-size: 1.5rem;
     /* border: black 1px solid; */
@@ -27,22 +53,133 @@ main{
     background-color: white;
     /* box-shadow: 2px 2px 4px -2px gray inset */
     border-radius: 10%;
+    max-width: 100%;
 }
-.rightTopTitle{
+
+.rightTopTitle {
     color: #0f71bc;
 }
-.rightTopNumber{
+
+.rightTopNumber {
     font-size: 3rem;
 }
-.rightTopBottom{
+
+.rightTopBottom {
     color: #97b9d1;
 }
-.donutChartsContainer{
-    margin: 20px;
+
+.donutChartsContainer {
+    margin: 20px 50px 0 50px;
 }
-.donutCharts{
-    /* border-radius: 30%; */
+
+.donutCharts {
+    max-width: 800px;
+    width: 100%;
+    /* height: auto; */
+    background-color: white;
+    
 }
-.columChart{
-    color: black;
+
+li {
+    list-style-type: none;
+}
+
+li::before {
+    position: relative;
+    top: -2px;
+    left: -18px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-radius: 100%;
+    background: darkturquoise;
+}
+.HTML::before{
+    background-color: #0142E5;
+}
+.CSS::before{
+    background-color: #2270B9;
+}
+.JavaScript::before{
+    background-color: #4EBEDC;
+}
+.PHP::before{
+    background-color: #5CDBF9;
+}
+.Laravel::before{
+    background-color: #B29DEF;
+}
+.SQL::before{
+    background-color: #A5A1F2;
+}
+.Shell::before{
+    background-color: #4C43E8;
+}
+.another::before{
+    background-color: #4B43E8;
+}
+.NYobi::before{
+    background-color: #0142E5;
+}
+.Dot::before{
+    background-color: #4EBEDC;
+}
+.asignment::before{
+    background-color: #93BDF1;
+}
+
+.navigation{
+    margin: 80px auto 80px auto;
+    
+}
+footer{
+    height: 40px;
+}
+.none{
+    display: none;
+}
+.loading{
+    margin: 300px 0;
+}
+.complete{
+    margin: 300px 0;
+}
+@media screen and (max-width: 780px) {
+    .mainContainer {
+        margin: auto;
+        padding-top: 10px;
+    }
+    .donutCharts {
+        width: 50%;
+        height: auto;
+        margin: 10px;
+    }
+    .rightTopContent {
+        /* max-width: 50%; */
+        font-size: 0.5rem;
+    }
+    .rightTopContents {
+        margin: 20px;
+    }
+    .rightTopNumber {
+        font-size: 1rem;
+    }
+    .donutChartsContainer {
+        margin: 0;
+        font-size: 0.1rem;
+        /* padding: 0 !impotant; */
+    }
+    .columnChart {
+        /* height: 200px; */
+    }
+    .container {
+        margin: auto;
+    }
+    .navigation{
+        margin: 20px 0 0 0;
+    }
+    footer{
+        display: none;
+    }
 }

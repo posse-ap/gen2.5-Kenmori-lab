@@ -1,7 +1,7 @@
 'use strict';
 google.load("visualization", "1", { packages: ["corechart"] });
-google.setOnLoadCallback(
-    function () {
+google.setOnLoadCallback(columnChart)
+    function columnChart() {
         var data = google.visualization.arrayToDataTable([
             ['', ''],
             ['1', 1],
@@ -38,8 +38,8 @@ google.setOnLoadCallback(
         ]);
 
         var options = {
-            'width': 600,
-            'height': 350,
+            width: '100%',
+            height: '80%',
             legend: 'none',
             // backgroundColor: 'linear-gradient(#0f71bc',
             // backgroundColor: 'linear-gradient(#0f71bc, #3ccfff)',
@@ -62,10 +62,9 @@ google.setOnLoadCallback(
         
         };
 
-        var chart = new google.visualization.ColumnChart(document.getElementById('gct_sample_column'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('columnChart'));
         chart.draw(data, options);
-    }
-);
+    };
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
 function drawChart1() {
@@ -78,14 +77,14 @@ function drawChart1() {
 
 
     var options = {
-        title: '学習言語',
+        title: { position: 'none'  } ,
         pieHole: 0.4,
-        legend: 'bottom',
-        'width': 250,
-        'height': 600,
-        'chartArea': { 'width': '100%', 'height': '80%' },
-        'legend': { 'position': 'bottom' }
-        // colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6', '#f6c7b6', '#f6c7b6'],
+        legend: {position: 'none'},
+        width: '100%',
+        height: '80%',
+        chartArea: { 'width': '100%', 'height': '80%' },
+        // 'legend': { 'position': 'bottom' }
+        colors: ['#0142E5', '#2270B9', '#4EBEDC', '#5CDBF9', '#B29DEF', '#A5A1F2', '#4C43E8','#4B43E8'],
         // backgroundColor: {
         //     stroke: '#4322c0',
         //     strokeWidth: 3
@@ -107,15 +106,48 @@ function drawChart2() {
     ]);
 
     var options = {
-        title: '学習コンテンツ',
+        title: { position: 'none'  } ,
         pieHole: 0.4,
-        legend: 'bottom',
-        'width': 250,
-        'height': 600,
-        'chartArea': { 'width': '100%', 'height': '80%' },
-        'legend': { 'position': 'bottom' }
+        legend: { position: 'none'  } ,
+        width: '100%',
+        height: '80%',
+        chartArea: { 'width': '100%', 'height': '80%' },
+        colors: ['#0142E5', '#4EBEDC', '#93BDF1'],
+        // 'legend': { 'position': 'bottom' }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
     chart.draw(data, options);
 }
+
+window.onresize = function(){
+    
+    columnChart();
+    drawChart1();
+    drawChart2();
+    
+}
+
+
+let submitButton = document.getElementById('submitButton')
+let modalContent = document.getElementById('modal-content')
+let loading = document.getElementById('loading')
+let complete = document.getElementById('complete')
+
+submitButton.addEventListener('click',() => {
+modalContent.classList.add("none")
+loading.classList.remove("none")
+// console.log("a")
+setTimeout(() => {
+    loading.classList.add("none")
+    complete.classList.remove("none")
+    console.log("Execution 5sec"); // Execution 5sec
+}, 5000);
+},false)
+
+// let calender = document.getElementById('calender')
+// calender.datepicker();
+
+// $('#sandbox-container input').datepicker({
+// });
+flatpickr('.flatpickr');
