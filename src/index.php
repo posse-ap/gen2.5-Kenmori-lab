@@ -1,3 +1,9 @@
+<?php
+echo "Hi, I'm a PHP script!";
+// phpinfo();
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
